@@ -1,0 +1,693 @@
+[
+    {
+      "id": "101",
+      "title": "Samsung Galaxy S22 Ultra",
+      "thumbnail": "https://i.ibb.co/0YQW1K1/galaxy-s22.jpg",
+      "images": [
+        "https://i.ibb.co/0YQW1K1/galaxy-s22.jpg",
+        "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-1.jpg",
+        "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-2.jpg"
+      ],
+      "price": "EGP 35,000.00",
+      "colors": ["black", "white", "burgundy"],
+      "description": "هاتف رائد من سامسونج بكاميرا 108MP وبطارية قوية وأداء ممتاز للألعاب والتصوير.",
+      "category": "technology"
+    },
+    {
+      "id": "102",
+      "title": "Apple MacBook Air M2",
+      "thumbnail": "https://i.ibb.co/gT8FTkF/macbook-air-m2.jpg",
+      "images": [
+        "https://i.ibb.co/gT8FTkF/macbook-air-m2.jpg",
+        "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-202206?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653493200207",
+        "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-spacegray-gallery1-202206?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1652893982563"
+      ],
+      "price": "EGP 65,000.00",
+      "colors": ["midnight", "silver", "spacegray"],
+      "description": "لابتوب خفيف الوزن بمعالج Apple M2 الجديد، مثالي للدراسة والتصميم والبرمجة.",
+      "category": "technology"
+    },
+    {
+      "id": "103",
+      "title": "Sony WH-1000XM5 Headphones",
+      "thumbnail": "https://i.ibb.co/6DgdZqd/sony-headphones.jpg",
+      "images": [
+        "https://i.ibb.co/6DgdZqd/sony-headphones.jpg",
+        "https://www.sony.com/image/4f9ecaa2d64c0fbc21f4b3e6b5c86564?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+        "https://www.sony.com/image/3ad90dd14ab1c063eb7d1b9b69b728cb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF"
+      ],
+      "price": "EGP 14,500.00",
+      "colors": ["black", "silver"],
+      "description": "سماعات لاسلكية بعزل ضوضاء متطور وصوت نقي. تدعم البلوتوث وGoogle Assistant.",
+      "category": "technology"
+    },
+    {
+      "id": "104",
+      "title": "LG 55\" 4K Smart TV",
+      "thumbnail": "https://i.ibb.co/wLdsr07/lg-tv.jpg",
+      "images": [
+        "https://i.ibb.co/wLdsr07/lg-tv.jpg",
+        "https://www.lg.com/eg_en/images/tvs/md07527589/gallery/medium01.jpg",
+        "https://www.lg.com/eg_en/images/tvs/md07527589/gallery/medium02.jpg"
+      ],
+      "price": "EGP 23,999.00",
+      "colors": ["black"],
+      "description": "تليفزيون ذكي بشاشة UHD 4K ونظام webOS لتشغيل التطبيقات مثل YouTube وNetflix.",
+      "category": "technology"
+    },
+    {
+      "id": "105",
+      "title": "Xiaomi Mi Smart Band 8",
+      "thumbnail": "https://i.ibb.co/GVbzScX/mi-band.jpg",
+      "images": [
+        "https://i.ibb.co/GVbzScX/mi-band.jpg",
+        "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-smart-band-8.jpg",
+        "https://cdn.shopify.com/s/files/1/0588/8706/3167/products/mi-band8.jpg"
+      ],
+      "price": "EGP 1,300.00",
+      "colors": ["black", "white", "beige"],
+      "description": "سوار ذكي يتابع معدل ضربات القلب، خطواتك، وساعات النوم. مقاوم للماء.",
+      "category": "technology"
+    },
+    {
+      "id": "106",
+      "title": "HP DeskJet 2710 Printer",
+      "thumbnail": "https://i.ibb.co/59m3FTb/hp-printer.jpg",
+      "images": [
+        "https://i.ibb.co/59m3FTb/hp-printer.jpg",
+        "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06522789.png",
+        "https://images.hp.com/is/image/hpwebcontent/c06522789?wid=1440&hei=1080"
+      ],
+      "price": "EGP 2,100.00",
+      "colors": ["white"],
+      "description": "طابعة متعددة الوظائف تدعم الواي فاي والطباعة من الهاتف. مثالية للاستخدام المنزلي.",
+      "category": "technology"
+    },
+    {
+      "id": "107",
+      "title": "Canon EOS 4000D DSLR Camera",
+      "thumbnail": "https://i.ibb.co/YcMPqns/canon-dslr.jpg",
+      "images": [
+        "https://i.ibb.co/YcMPqns/canon-dslr.jpg",
+        "https://www.canon-europe.com/media/eos-4000d_800x800_tcm13-1672759.jpg",
+        "https://www.canon-europe.com/media/eos-4000d_2_800x800_tcm13-1672760.jpg"
+      ],
+      "price": "EGP 18,999.00",
+      "colors": ["black"],
+      "description": "كاميرا احترافية بعدسة 18-55mm، ممتازة للمبتدئين في التصوير الفوتوغرافي.",
+      "category": "technology"
+    },
+    {
+      "id": "108",
+      "title": "Logitech MX Master 3 Mouse",
+      "thumbnail": "https://i.ibb.co/0Q2sM6Y/logitech-mouse.jpg",
+      "images": [
+        "https://i.ibb.co/0Q2sM6Y/logitech-mouse.jpg",
+        "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3/gallery/mx-master-3-gallery-1.jpg",
+        "https://resource.logitech.com/content/dam/logitech/en/products/mice/mx-master-3/gallery/mx-master-3-gallery-2.jpg"
+      ],
+      "price": "EGP 3,200.00",
+      "colors": ["black", "gray"],
+      "description": "ماوس لاسلكي احترافي بدقة عالية وتخصيص أزرار، مثالي للبرمجة والتصميم.",
+      "category": "technology"
+    },
+    {
+      "id": "109",
+      "title": "Anker PowerCore 20000mAh Power Bank",
+      "thumbnail": "https://i.ibb.co/GWcNVd3/anker-powerbank.jpg",
+      "images": [
+        "https://i.ibb.co/GWcNVd3/anker-powerbank.jpg",
+        "https://m.media-amazon.com/images/I/51CyUemAT1L._AC_SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61HTZRJdBJL._AC_SL1500_.jpg"
+      ],
+      "price": "EGP 950.00",
+      "colors": ["black"],
+      "description": "باور بانك قوي بسعة 20000mAh يشحن هاتفك عدة مرات بسرعة وأمان.",
+      "category": "technology"
+    },
+    {
+      "id": "110",
+      "title": "Amazon Echo Dot (5th Gen)",
+      "thumbnail": "https://i.ibb.co/QrbfjKf/echo-dot.jpg",
+      "images": [
+        "https://i.ibb.co/QrbfjKf/echo-dot.jpg",
+        "https://m.media-amazon.com/images/I/61lWlJYRVcL._AC_SL1000_.jpg",
+        "https://m.media-amazon.com/images/I/61J3vWj1rCL._AC_SL1000_.jpg"
+      ],
+      "price": "EGP 1,800.00",
+      "colors": ["charcoal", "white", "blue"],
+      "description": "مساعد ذكي من أمازون مزود بـ Alexa للتحكم الصوتي بالموسيقى والأجهزة الذكية.",
+      "category": "technology"
+    },
+     {
+    "id": "201",
+    "title": "IKEA LACK Coffee Table",
+    "thumbnail": "https://i.ibb.co/MZ5RhSB/lack-table.jpg",
+    "images": [
+      "https://i.ibb.co/MZ5RhSB/lack-table.jpg",
+      "https://www.ikea.com/us/en/images/products/lack-coffee-table-white__0736024_pe740925_s5.jpg",
+      "https://www.ikea.com/us/en/images/products/lack-coffee-table-black-brown__0736025_pe740926_s5.jpg"
+    ],
+    "price": "EGP 750.00",
+    "colors": ["white", "black", "oak"],
+    "description": "ترابيزة قهوة صغيرة، عملية وخفيفة الوزن، مثالية للغرف الصغيرة.",
+    "category": "furniture"
+  },
+  {
+    "id": "202",
+    "title": "Modern Fabric Sofa - 3 Seater",
+    "thumbnail": "https://i.ibb.co/kKhx4Rt/modern-sofa.jpg",
+    "images": [
+      "https://i.ibb.co/kKhx4Rt/modern-sofa.jpg",
+      "https://images.unsplash.com/photo-1588854337236-cf35b4b11780",
+      "https://images.unsplash.com/photo-1615874959474-d609969a2e27"
+    ],
+    "price": "EGP 9,800.00",
+    "colors": ["gray", "blue", "beige"],
+    "description": "كنبة قماشية مريحة بثلاثة مقاعد، تصميم عصري مثالي للصالونات والمعيشة.",
+    "category": "furniture"
+  },
+  {
+    "id": "203",
+    "title": "Wooden Study Desk with Drawers",
+    "thumbnail": "https://i.ibb.co/YNzpj3V/study-desk.jpg",
+    "images": [
+      "https://i.ibb.co/YNzpj3V/study-desk.jpg",
+      "https://images.unsplash.com/photo-1616627562067-5ef9f1dc384e",
+      "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2"
+    ],
+    "price": "EGP 3,200.00",
+    "colors": ["walnut", "oak"],
+    "description": "مكتب خشبي للدراسة أو العمل مع أدراج تخزين جانبية، تصميم عملي وأنيق.",
+    "category": "furniture"
+  },
+  {
+    "id": "204",
+    "title": "Minimalist Bookshelf - 5 Shelves",
+    "thumbnail": "https://i.ibb.co/HCpkfWx/bookshelf.jpg",
+    "images": [
+      "https://i.ibb.co/HCpkfWx/bookshelf.jpg",
+      "https://images.unsplash.com/photo-1584568698343-97c92df1a6c9",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+    ],
+    "price": "EGP 2,400.00",
+    "colors": ["white", "black"],
+    "description": "مكتبة بـ 5 رفوف لتخزين الكتب والتحف، تصميم بسيط وعملي.",
+    "category": "furniture"
+  },
+  {
+    "id": "205",
+    "title": "Dining Table Set with 4 Chairs",
+    "thumbnail": "https://i.ibb.co/nMBtZ0k/dining-set.jpg",
+    "images": [
+      "https://i.ibb.co/nMBtZ0k/dining-set.jpg",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1602824110067-1c4d55a6cc84"
+    ],
+    "price": "EGP 11,500.00",
+    "colors": ["walnut", "white"],
+    "description": "طقم سفرة يتكوّن من ترابيزة وأربع كراسي، خامات خشبية قوية ولمسة أنيقة.",
+    "category": "furniture"
+  },
+  {
+    "id": "206",
+    "title": "Bedroom Wardrobe - 3 Doors",
+    "thumbnail": "https://i.ibb.co/BzpvTV2/wardrobe.jpg",
+    "images": [
+      "https://i.ibb.co/BzpvTV2/wardrobe.jpg",
+      "https://images.unsplash.com/photo-1616627976537-d3e0a6e5a4ef",
+      "https://images.unsplash.com/photo-1605236455123-60175796c9d1"
+    ],
+    "price": "EGP 7,800.00",
+    "colors": ["brown", "white"],
+    "description": "دولاب ملابس بـ 3 أبواب يحتوي على أرفف ومساحة لتعليق الملابس.",
+    "category": "furniture"
+  },
+  {
+    "id": "207",
+    "title": "Recliner Armchair - Comfortable Design",
+    "thumbnail": "https://i.ibb.co/JzTgZ8p/recliner.jpg",
+    "images": [
+      "https://i.ibb.co/JzTgZ8p/recliner.jpg",
+      "https://images.unsplash.com/photo-1618221199780-06c9cd74f0d0",
+      "https://images.unsplash.com/photo-1600038666200-c1ec5a6e477c"
+    ],
+    "price": "EGP 6,000.00",
+    "colors": ["darkgray", "brown"],
+    "description": "كرسي استرخاء مريح بمسند ظهر متحرك، مثالي للراحة أو مشاهدة التلفاز.",
+    "category": "furniture"
+  },
+  {
+    "id": "208",
+    "title": "Floating Wall Shelf - Set of 3",
+    "thumbnail": "https://i.ibb.co/k31qD59/wall-shelf.jpg",
+    "images": [
+      "https://i.ibb.co/k31qD59/wall-shelf.jpg",
+      "https://images.unsplash.com/photo-1616628182506-136efc81f94c",
+      "https://images.unsplash.com/photo-1600180758890-e0361e9f4698"
+    ],
+    "price": "EGP 900.00",
+    "colors": ["white", "black", "wood"],
+    "description": "رفوف حائط ديكورية تُستخدم للكتب، النباتات أو التزيين، سهلة التركيب.",
+    "category": "furniture"
+  },
+  {
+    "id": "209",
+    "title": "Bed Frame with Storage Drawers",
+    "thumbnail": "https://i.ibb.co/3mZskcx/bed-frame.jpg",
+    "images": [
+      "https://i.ibb.co/3mZskcx/bed-frame.jpg",
+      "https://images.unsplash.com/photo-1615874959474-d609969a2e27",
+      "https://images.unsplash.com/photo-1598300055780-596aadfe7ed0"
+    ],
+    "price": "EGP 12,000.00",
+    "colors": ["white", "wood", "black"],
+    "description": "سرير عملي يحتوي على أدراج تخزين جانبية وأسفل السرير لتوفير المساحة.",
+    "category": "furniture"
+  },
+  {
+    "id": "210",
+    "title": "Ergonomic Office Chair - Mesh Back",
+    "thumbnail": "https://i.ibb.co/5FphhTp/office-chair.jpg",
+    "images": [
+      "https://i.ibb.co/5FphhTp/office-chair.jpg",
+      "https://images.unsplash.com/photo-1616628221661-6db148e07d10",
+      "https://images.unsplash.com/photo-1616628270136-90d8c5ea4891"
+    ],
+    "price": "EGP 3,600.00",
+    "colors": ["black", "gray"],
+    "description": "كرسي مكتب مريح بدعم للظهر وتصميم شبكي للتهوية، قابل للتعديل ويدور 360°.",
+    "category": "furniture"
+  },
+  {
+    "id": "301",
+    "title": "Men's Classic Denim Jacket",
+    "thumbnail": "https://i.ibb.co/9VwFZhz/denim-jacket.jpg",
+    "images": [
+      "https://i.ibb.co/9VwFZhz/denim-jacket.jpg",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+    ],
+    "price": "EGP 1,250.00",
+    "colors": ["blue", "black"],
+    "description": "جاكيت جينز كلاسيكي للرجال، مثالي لأناقة يومية وعصرية.",
+    "category": "clothes"
+  },
+  {
+    "id": "302",
+    "title": "Women's Oversized Hoodie",
+    "thumbnail": "https://i.ibb.co/zZVK6Hy/oversized-hoodie.jpg",
+    "images": [
+      "https://i.ibb.co/zZVK6Hy/oversized-hoodie.jpg",
+      "https://images.unsplash.com/photo-1618354691373-4665c751ab2d",
+      "https://images.unsplash.com/photo-1618354746797-2736fbb2cf56"
+    ],
+    "price": "EGP 950.00",
+    "colors": ["beige", "pink", "gray"],
+    "description": "هودي واسع للنساء، مريح وخامة ثقيلة مناسبة للشتاء.",
+    "category": "clothes"
+  },
+  {
+    "id": "303",
+    "title": "Unisex Cotton T-Shirt - Black",
+    "thumbnail": "https://i.ibb.co/7GHfMKx/cotton-tshirt.jpg",
+    "images": [
+      "https://i.ibb.co/7GHfMKx/cotton-tshirt.jpg",
+      "https://images.unsplash.com/photo-1585386959984-a4155222b51c",
+      "https://images.unsplash.com/photo-1618354579938-6cb2e29df0e5"
+    ],
+    "price": "EGP 250.00",
+    "colors": ["black", "white", "navy"],
+    "description": "تيشيرت قطني عملي للجنسين، خامة عالية الجودة وناعمة على البشرة.",
+    "category": "clothes"
+  },
+  {
+    "id": "304",
+    "title": "High-Waisted Mom Jeans",
+    "thumbnail": "https://i.ibb.co/xHRs5PB/mom-jeans.jpg",
+    "images": [
+      "https://i.ibb.co/xHRs5PB/mom-jeans.jpg",
+      "https://images.unsplash.com/photo-1606813908440-55e3f6aeeefc",
+      "https://images.unsplash.com/photo-1618354659941-37e9f5943c62"
+    ],
+    "price": "EGP 730.00",
+    "colors": ["lightblue", "darkblue"],
+    "description": "بنطلون جينز موم بخصر عالي، تصميم أنيق ومريح.",
+    "category": "clothes"
+  },
+  {
+    "id": "305",
+    "title": "Men's Slim Fit Chinos",
+    "thumbnail": "https://i.ibb.co/FKsyR6d/slim-chinos.jpg",
+    "images": [
+      "https://i.ibb.co/FKsyR6d/slim-chinos.jpg",
+      "https://images.unsplash.com/photo-1520975918108-7c8e7d5e5bcf",
+      "https://images.unsplash.com/photo-1618354606700-b832a0a19e6c"
+    ],
+    "price": "EGP 600.00",
+    "colors": ["khaki", "gray", "black"],
+    "description": "بنطلون قماش عصري بستايل Slim Fit مناسب للعمل أو الطلعات اليومية.",
+    "category": "clothes"
+  },
+  {
+    "id": "306",
+    "title": "Women's Summer Floral Dress",
+    "thumbnail": "https://i.ibb.co/tL8tDym/floral-dress.jpg",
+    "images": [
+      "https://i.ibb.co/tL8tDym/floral-dress.jpg",
+      "https://images.unsplash.com/photo-1618354785269-ec97f32b6b2b",
+      "https://images.unsplash.com/photo-1618354791675-2c3b305719f0"
+    ],
+    "price": "EGP 1,050.00",
+    "colors": ["floral", "white", "blue"],
+    "description": "فستان صيفي بنقشة زهور، خفيف ومثالي للمشاوير النهارية.",
+    "category": "clothes"
+  },
+  {
+    "id": "307",
+    "title": "Basic Crewneck Sweatshirt",
+    "thumbnail": "https://i.ibb.co/Z1DGY2F/crewneck.jpg",
+    "images": [
+      "https://i.ibb.co/Z1DGY2F/crewneck.jpg",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+      "https://images.unsplash.com/photo-1618354731232-506bbf9d35dc"
+    ],
+    "price": "EGP 430.00",
+    "colors": ["green", "gray", "maroon"],
+    "description": "سويت شيرت بسيط بستايل كاجوال، مناسب للخريف والشتاء.",
+    "category": "clothes"
+  },
+  {
+    "id": "308",
+    "title": "Men's White Dress Shirt",
+    "thumbnail": "https://i.ibb.co/gwzbfNH/dress-shirt.jpg",
+    "images": [
+      "https://i.ibb.co/gwzbfNH/dress-shirt.jpg",
+      "https://images.unsplash.com/photo-1593032457869-d0d8b84d8c74",
+      "https://images.unsplash.com/photo-1618354689382-0d55ac9a9673"
+    ],
+    "price": "EGP 520.00",
+    "colors": ["white", "lightblue"],
+    "description": "قميص كلاسيكي رجالي بأكمام طويلة، مثالي للمناسبات الرسمية.",
+    "category": "clothes"
+  },
+  {
+    "id": "309",
+    "title": "Puffer Jacket with Hood",
+    "thumbnail": "https://i.ibb.co/hLCM2PB/puffer-jacket.jpg",
+    "images": [
+      "https://i.ibb.co/hLCM2PB/puffer-jacket.jpg",
+      "https://images.unsplash.com/photo-1608251254175-734b48c2598d",
+      "https://images.unsplash.com/photo-1605228278030-28ed74f1e2e7"
+    ],
+    "price": "EGP 1,950.00",
+    "colors": ["black", "red", "navy"],
+    "description": "جاكيت مبطن مزود بغطاء رأس، يحميك من البرد القارس والأمطار.",
+    "category": "clothes"
+  },
+  {
+    "id": "310",
+    "title": "Kids' Printed Pajama Set",
+    "thumbnail": "https://i.ibb.co/FY1xXRh/kids-pajama.jpg",
+    "images": [
+      "https://i.ibb.co/FY1xXRh/kids-pajama.jpg",
+      "https://images.unsplash.com/photo-1618354706509-62ef95c6a089",
+      "https://images.unsplash.com/photo-1618354719137-bc8433c4123f"
+    ],
+    "price": "EGP 280.00",
+    "colors": ["blue", "pink", "yellow"],
+    "description": "طقم بيجاما مطبوع للأطفال، خامة قطنية ناعمة لتوفير أقصى راحة.",
+    "category": "clothes"
+  },
+  {
+    "id": "401",
+    "title": "Samsung 55\" 4K UHD Smart TV",
+    "thumbnail": "https://i.ibb.co/yFRf4FH/samsung-tv.jpg",
+    "images": [
+      "https://i.ibb.co/yFRf4FH/samsung-tv.jpg",
+      "https://images.samsung.com/is/image/samsung/assets/global/tvs",
+      "https://images.samsung.com/is/image/samsung/assets/global/4k-uhd-tv"
+    ],
+    "price": "EGP 14,500.00",
+    "colors": ["black"],
+    "description": "شاشة سامسونج سمارت 55 بوصة بدقة 4K لتجربة مشاهدة سينمائية.",
+    "category": "electronics"
+  },
+  {
+    "id": "402",
+    "title": "LG Front Load Washing Machine 9Kg",
+    "thumbnail": "https://i.ibb.co/Lnphn9S/lg-washer.jpg",
+    "images": [
+      "https://i.ibb.co/Lnphn9S/lg-washer.jpg",
+      "https://images.lg.com/eg/images/washing-machines",
+      "https://images.unsplash.com/photo-1618081221844"
+    ],
+    "price": "EGP 12,750.00",
+    "colors": ["silver", "white"],
+    "description": "غسالة LG تحميل أمامي سعة 9 كجم مع تقنية البخار.",
+    "category": "electronics"
+  },
+  {
+    "id": "403",
+    "title": "Fresh No Frost Refrigerator 16ft",
+    "thumbnail": "https://i.ibb.co/ZMrdGtF/fresh-fridge.jpg",
+    "images": [
+      "https://i.ibb.co/ZMrdGtF/fresh-fridge.jpg",
+      "https://images.unsplash.com/photo-1571171637578",
+      "https://images.unsplash.com/photo-1598514982841"
+    ],
+    "price": "EGP 18,000.00",
+    "colors": ["silver"],
+    "description": "ثلاجة فريش نوفروست 16 قدم - تبريد فائق، موفرة للطاقة.",
+    "category": "electronics"
+  },
+  {
+    "id": "404",
+    "title": "Tornado Electric Oven 48L",
+    "thumbnail": "https://i.ibb.co/G3jv2F7/electric-oven.jpg",
+    "images": [
+      "https://i.ibb.co/G3jv2F7/electric-oven.jpg",
+      "https://images.unsplash.com/photo-1587825140708",
+      "https://images.unsplash.com/photo-1590080876394"
+    ],
+    "price": "EGP 2,200.00",
+    "colors": ["black"],
+    "description": "فرن كهربائي تورنيدو سعة 48 لتر لتحضير أشهى الوجبات.",
+    "category": "electronics"
+  },
+  {
+    "id": "405",
+    "title": "Black+Decker Microwave 30L",
+    "thumbnail": "https://i.ibb.co/JkZ3zXK/microwave.jpg",
+    "images": [
+      "https://i.ibb.co/JkZ3zXK/microwave.jpg",
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2",
+      "https://images.unsplash.com/photo-1618354423767"
+    ],
+    "price": "EGP 3,750.00",
+    "colors": ["white", "black"],
+    "description": "ميكروويف بلاك اند ديكر سعة 30 لتر - تسخين سريع وتحكم رقمي.",
+    "category": "electronics"
+  },
+  {
+    "id": "406",
+    "title": "Philips Air Fryer XXL",
+    "thumbnail": "https://i.ibb.co/pz0M5Kk/airfryer.jpg",
+    "images": [
+      "https://i.ibb.co/pz0M5Kk/airfryer.jpg",
+      "https://images.unsplash.com/photo-1624462180020",
+      "https://images.unsplash.com/photo-1613447335583"
+    ],
+    "price": "EGP 5,999.00",
+    "colors": ["black"],
+    "description": "قلاية هوائية من فيليبس XXL لتحضير الطعام بدون زيت.",
+    "category": "electronics"
+  },
+  {
+    "id": "407",
+    "title": "Tefal Steam Iron",
+    "thumbnail": "https://i.ibb.co/VMv8vs3/steam-iron.jpg",
+    "images": [
+      "https://i.ibb.co/VMv8vs3/steam-iron.jpg",
+      "https://images.unsplash.com/photo-1606046604972",
+      "https://images.unsplash.com/photo-1601597115073"
+    ],
+    "price": "EGP 780.00",
+    "colors": ["blue", "white"],
+    "description": "مكواة بخار تيفال بقدرة عالية لإزالة التجاعيد بسهولة.",
+    "category": "electronics"
+  },
+  {
+    "id": "408",
+    "title": "Panasonic Electric Shaver",
+    "thumbnail": "https://i.ibb.co/MnWrZts/shaver.jpg",
+    "images": [
+      "https://i.ibb.co/MnWrZts/shaver.jpg",
+      "https://images.unsplash.com/photo-1564869734496",
+      "https://images.unsplash.com/photo-1618354519786"
+    ],
+    "price": "EGP 1,350.00",
+    "colors": ["black"],
+    "description": "ماكينة حلاقة باناسونيك الكهربائية للرجال - شحن سريع وأداء دقيق.",
+    "category": "electronics"
+  },
+  {
+    "id": "409",
+    "title": "Universal Water Dispenser",
+    "thumbnail": "https://i.ibb.co/Zdcfr7D/water-dispenser.jpg",
+    "images": [
+      "https://i.ibb.co/Zdcfr7D/water-dispenser.jpg",
+      "https://images.unsplash.com/photo-1621996348886",
+      "https://images.unsplash.com/photo-1621996375553"
+    ],
+    "price": "EGP 2,999.00",
+    "colors": ["white", "gray"],
+    "description": "مبرد مياه يونيفرسال - يوفر ماء بارد وساخن، تصميم أنيق.",
+    "category": "electronics"
+  },
+  {
+    "id": "410",
+    "title": "Sharp Vacuum Cleaner 2000W",
+    "thumbnail": "https://i.ibb.co/Y8bWyN4/vacuum.jpg",
+    "images": [
+      "https://i.ibb.co/Y8bWyN4/vacuum.jpg",
+      "https://images.unsplash.com/photo-1583337130417",
+      "https://images.unsplash.com/photo-1579821441418"
+    ],
+    "price": "EGP 2,550.00",
+    "colors": ["red", "black"],
+    "description": "مكنسة شارب كهربائية بقدرة 2000 واط لتنظيف فائق القوة.",
+    "category": "electronics"
+  },
+  {
+    "id": "501",
+    "title": "Atomic Habits",
+    "thumbnail": "https://i.ibb.co/MZ9RwFJ/atomic-habits.jpg",
+    "images": [
+      "https://i.ibb.co/MZ9RwFJ/atomic-habits.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg"
+    ],
+    "price": "EGP 320.00",
+    "colors": ["white"],
+    "description": "A proven framework for building good habits and breaking bad ones by James Clear.",
+    "category": "books"
+  },
+  {
+    "id": "502",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "thumbnail": "https://i.ibb.co/Mf64ghk/subtle-art.jpg",
+    "images": [
+      "https://i.ibb.co/Mf64ghk/subtle-art.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/71QKQ9mwV7L.jpg"
+    ],
+    "price": "EGP 290.00",
+    "colors": ["orange"],
+    "description": "A counterintuitive approach to living a good life by Mark Manson.",
+    "category": "books"
+  },
+  {
+    "id": "503",
+    "title": "Rich Dad Poor Dad",
+    "thumbnail": "https://i.ibb.co/Dbct2s0/richdad.jpg",
+    "images": [
+      "https://i.ibb.co/Dbct2s0/richdad.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81bsw6fnUiL.jpg"
+    ],
+    "price": "EGP 250.00",
+    "colors": ["purple"],
+    "description": "Robert Kiyosaki’s classic on financial education and independence.",
+    "category": "books"
+  },
+  {
+    "id": "504",
+    "title": "Start With Why",
+    "thumbnail": "https://i.ibb.co/8K8p1kg/startwithwhy.jpg",
+    "images": [
+      "https://i.ibb.co/8K8p1kg/startwithwhy.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/71xBLRBYOiL.jpg"
+    ],
+    "price": "EGP 270.00",
+    "colors": ["red", "white"],
+    "description": "Simon Sinek’s guide to inspirational leadership and meaningful work.",
+    "category": "books"
+  },
+  {
+    "id": "505",
+    "title": "Ikigai: The Japanese Secret to a Long and Happy Life",
+    "thumbnail": "https://i.ibb.co/FKnMtr5/ikigai.jpg",
+    "images": [
+      "https://i.ibb.co/FKnMtr5/ikigai.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81yjoYuLFCL.jpg"
+    ],
+    "price": "EGP 310.00",
+    "colors": ["blue"],
+    "description": "A beautiful guide to living with purpose, based on Japanese wisdom.",
+    "category": "books"
+  },
+  {
+    "id": "506",
+    "title": "Think and Grow Rich",
+    "thumbnail": "https://i.ibb.co/1nWxK4p/thinkandgrow.jpg",
+    "images": [
+      "https://i.ibb.co/1nWxK4p/thinkandgrow.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/81j0lFNrVdL.jpg"
+    ],
+    "price": "EGP 240.00",
+    "colors": ["black", "gold"],
+    "description": "Napoleon Hill’s timeless principles for success and wealth.",
+    "category": "books"
+  },
+  {
+    "id": "507",
+    "title": "Deep Work",
+    "thumbnail": "https://i.ibb.co/WszZ7YG/deepwork.jpg",
+    "images": [
+      "https://i.ibb.co/WszZ7YG/deepwork.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg"
+    ],
+    "price": "EGP 295.00",
+    "colors": ["yellow", "black"],
+    "description": "Cal Newport’s guide to focused success in a distracted world.",
+    "category": "books"
+  },
+  {
+    "id": "508",
+    "title": "Can’t Hurt Me",
+    "thumbnail": "https://i.ibb.co/qFy3kx4/canthurtme.jpg",
+    "images": [
+      "https://i.ibb.co/qFy3kx4/canthurtme.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/61xV8ZVrbnL.jpg"
+    ],
+    "price": "EGP 330.00",
+    "colors": ["black"],
+    "description": "David Goggins shares his journey from hardship to mental toughness.",
+    "category": "books"
+  },
+  {
+    "id": "509",
+    "title": "The 5 AM Club",
+    "thumbnail": "https://i.ibb.co/HnWsyyz/5amclub.jpg",
+    "images": [
+      "https://i.ibb.co/HnWsyyz/5amclub.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/61e-1FLc8aL.jpg"
+    ],
+    "price": "EGP 280.00",
+    "colors": ["white", "red"],
+    "description": "Robin Sharma teaches how waking up early boosts productivity and growth.",
+    "category": "books"
+  },
+  {
+    "id": "510",
+    "title": "The Psychology of Money",
+    "thumbnail": "https://i.ibb.co/gZtBp6g/psychology-money.jpg",
+    "images": [
+      "https://i.ibb.co/gZtBp6g/psychology-money.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/71g2ednj0JL.jpg"
+    ],
+    "price": "EGP 315.00",
+    "colors": ["white", "green"],
+    "description": "Timeless lessons on wealth, greed, and happiness by Morgan Housel.",
+    "category": "books"
+  }
+  ]
+  
