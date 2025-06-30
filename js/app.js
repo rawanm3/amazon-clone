@@ -1,14 +1,14 @@
-function showPage(pageId) {
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-      section.style.display = "none";
-    });
+// function showPage(pageId) {
+//     const sections = document.querySelectorAll("section");
+//     sections.forEach(section => {
+//       section.style.display = "none";
+//     });
   
     const target = document.getElementById(pageId);
     if (target) {
       target.style.display = "block";
     }
-  }
+  
 
 window.onload = function () {
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
