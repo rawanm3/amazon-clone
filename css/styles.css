@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 99%;
+    height: 100%;
+    margin: auto;
+}
+/*==================navbar==================*/
+.navbar {
+    position: static;
+    background-color: rgb(19, 25, 33);
+    height: 3.75rem;
+    color: white;
+}
+/*==================logo==================*/
+.logo-container {
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    overflow: hidden;
+    border: 0.09375rem solid transparent;
+    cursor: pointer;
+}
+
+.logo {
+    width: 7.5rem;
+    height: 3.125rem;
+    background: url(/assets/images/nav-sprite-global-1x-reorg-privacy._CB546805360_.png);
+    background-repeat: no-repeat;
+    background-position-y: -2.5rem;
+    overflow: hidden;
+}
+.dot-eg {
+    position: relative;
+    margin-left: -0.8125rem;
+    margin-top: -0.625rem;
+}
+.container-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.border-white:hover {
+    border: 0.09375rem solid white;
+    padding: 0.3125rem;
+}
+/*==================address==================*/
+.adress-container  {
+margin-left: 0.9375rem;
+}
+#deliver-location {
+font-size: 0.75rem;
+color: #ccc;
+line-height: 0.875rem;
+height: 0.875rem;
+font-weight:400 ;
+padding-left: 0.94rem;
+}
+#country {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    line-height: 0.9375rem;
+}
+/*==================search==================*/
+.search-container{
+    background-color: red;
+    margin-left: 1.5625rem;
+    width: 55.625rem;
+    display: flex;
+    height: 2.5rem;
+    justify-content: space-between;
+    border-radius: 0.1875rem;
+    overflow: hidden;
+}
+.search-container:hover{
+    outline: 0.1875rem solid orange;
+}
+.search-select{
+    width: 3.125rem;
+    border: none;
+    background-color: rgb(230, 227, 227);
+}
+.search-input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0.1875rem;
+    font-size: 1.1rem;
+}
+.search-icon{
+    width: 3.125rem;
+    background-color: rgb(235, 160, 94);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #000;
+}
+/*==================language==================*/
+.language-container{
+margin-left: 1.5625rem;
+}
+.language-container p{
+    font-size: 0.8rem;
+    margin: 0;
+}
+.language-image{
+width: 1.25rem;
+}
+.language-image img{
+    width: 100%;
+}
+/*==================login==================*/
+.login-container {
+margin-left: 0.9375rem;
+}
+.login-container p{
+    margin: 0;
+}
+.account{
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+#account{
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 400;
+}
+/*==================return-order==================*/
+.return-order-container{
+width: 4.0625rem;
+font-size: 0.9rem;
+margin-left: 0.625rem;
+}
+.return-order-container p{
+margin: 0;
+}
+.order{
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    width: 4.375rem;
+    padding-left:0.1rem ;
+}
+/*==================cart==================*/
+.cart-container {
+font-size: 1.1rem;
+display: flex;
+}
+.cart-container i{
+font-size:1.5rem ;
+}

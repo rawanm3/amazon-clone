@@ -4,81 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amazon Clone</title>
+  <!-- css files -->
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- fontawesome-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <!--navbar -->
-  <nav>
+ <nav class="navbar">
+  <div class="container container-navbar">
     <!-- logo -->
-    <img src="" alt="Logo" onclick="showPage('home')">
-    <!-- search bar-->
-    <input type="text" id="searchInput" placeholder="Search..." >
+    <div class="logo-container border-white">
+    <div class="logo">
+        <a href="https://www.amazon.eg/-/en/ref=nav_logo"></a>
+    </div>
+    <span class="dot-eg">.eg</span>
+<!-- </div>
+        <button onclick="showPage('cart')">Cart</button>
+        <button id="loginNav" onclick="showPage('login')">Login</button>
+        <button id="logoutNav" onclick="logoutUser()" style="display: none;">Logout</button>
+</div> -->
     <!-- category dropdown -->
-    <div class="dropdown">
+    <!-- <div class="dropdown">
       <button class="dropbtn" onclick="showPage('category')">Category</button>
       <div class="dropdown-content">
         <a href="#" onclick="">Electronics</a>
         <a href="#" onclick="">Home</a>
         <a href="#" onclick="">furniture</a>
         <a href="#" onclick="">tech</a>
-        <a href="#" onclick="">books</a>
+        <a href="#" onclick="">books</a> -->
        </div>
+       <div class="adress-container border-white">
+        <span id="deliver-location">Deliver to</span>
+        <div class="icon-adress">
+          <i class="fa-solid fa-location-dot icon-location"></i>
+          <span id="country">Egypt</span>
+        </div>
+       </div>
+       <div class="search-container">
+        <select name="" id="" class="search-select">
+          <option value="">All</option>
+        </select>
+        <input type="text" class="search-input">
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+       </div>
+       <div class="language-container border-white">
+        <span class="language">EN</span>
+        <i class="fa-solid fa-chevron-down"></i>
+        <div class="language-image">
+          <img src="/amazon-clone/assets/images/OIP (1).webp" alt="">
+        </div>
+       </div>
+       <div class="login-container border-white">
+        <p id="account">Hello,<span>Sign in</span></p>
+        <p class="account">Account & Lists</p>
+       </div>
+       <div class="return-order-container border-white">
+         <div class="order">Orders</div>
+       </div>
+       <div class="cart-container border-white">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart
+      </div>
     </div>
-    <button onclick="showPage('cart')">Cart</button>
-    <button id="loginNav" onclick="showPage('login')">Login</button>
-    <button id="logoutNav" onclick="logoutUser()" style="display: none;">Logout</button>
   </nav>
 
   <!-- sections -->
    <!-- home -->
-  <section id="home">
+  <!-- <section id="home">
     <h2>Home</h2>
     <p id="welcomeMsg"></p>
     <div id="homeProducts"></div>
-  </section>
+  </section> -->
    <!-- login -->
-  <section id="login" style="display: none;">
+  <!-- <section id="login" style="display: none;">
     <h2>Login</h2>
     <input type="text" id="loginUsername" placeholder="Username" />
     <input type="password" id="loginPassword" placeholder="Password" />
     <button onclick="loginUser()">Login</button>
-    <p>Don't have an account? <a href="#" onclick="showPage('register')">Register</a></p>
+    <p>Don't have an account? <a href="#" onclick="showPage('register')">Register</a></p> -->
   </section>
    <!-- register -->
-  <section id="register" style="display: none;">
+  <!-- <section id="register" style="display: none;">
     <h2>Register</h2>
     <input type="text" id="regUsername" placeholder="Username" />
     <input type="password" id="regPassword" placeholder="Password" />
     <button onclick="registerUser()">Register</button>
     <p>Already have an account? <a href="#" onclick="showPage('login')">Login</a></p>
-  </section>
+  </section> -->
     <!-- search -->
-  <section id="search" style="display: none;">
+  <!-- <section id="search" style="display: none;">
     <h2>Search</h2>
     <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
     <div id="searchResults"></div>
-  </section>
+  </section> -->
    <!-- category -->
-  <section id="category" style="display: none;">
+  <!-- <section id="category" style="display: none;">
     <h2>Category</h2>
-  </section>
+  </section> -->
    <!-- cart -->
-  <section id="cart" style="display: none;">
+  <!-- <section id="cart" style="display: none;">
     <h2>Cart</h2>
     <div id="cartItems"></div>
-  </section>
+  </section> -->
    <!-- checkout -->
-  <section id="checkout" style="display: none;">
+  <!-- <section id="checkout" style="display: none;">
     <h2>Checkout</h2>
     <p>Total: $<span id="">0.00</span></p>
     <button onclick="checkout()">Confirm Purchase</button>
-  </section>
+  </section> -->
    <!-- product -->
-  <section id="product" style="display: none;">
+  <!-- <section id="product" style="display: none;">
     <h2>Product Details</h2>
     <div id="productDetails"></div>
-  </section>
+  </section> -->
 
   <!-- ✅ Scripts -->
   <script src="./js/app.js"></script>
