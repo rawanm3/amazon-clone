@@ -159,3 +159,44 @@ display: flex;
 .cart-container i{
 font-size:1.5rem ;
 }
+/*==================image slider==================*/
+.image-container{
+position: relative;
+}
+.image-list{
+display: flex;
+}
+.image-item{
+    min-width: 100%;
+    transition: transform 0.3s;
+}
+.image-item img{
+width: 100%;
+height: 100%;
+}
+.image-btn-container{
+position:absolute;
+top: 0;
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+.slider-btn{
+border: 0.0625rem solid transparent;
+padding: 6.25rem 20px;
+font-size: 3.125rem;
+font-weight: 300;
+background-color: transparent;
+color: #000;
+top: 6.25rem;
+}
+.slider-btn i{
+    font-weight: 900;
+    color: white;
+}
+.slider-btn:focus{
+    border-color: seagreen;
+    box-shadow: -0.125rem -0.125rem 0.125rem rgb(230, 227, 227),
+    0.125rem 0.125rem 0.125rem white;
+    margin: 0.125rem;
+}
