@@ -36,9 +36,8 @@ function registerUser() {
     localStorage.setItem("loggedInUser", JSON.stringify(user));
     alert("Logged in successfully");
     showPage("home");
-  
-    const welcome = document.getElementById("welcomeMsg");
-    if (welcome) welcome.innerText = `${user.username}`;
+    const welcome = document.getElementById("loginNav");
+    if (welcome) welcome.innerText = `${"hello, "+user.username}`;
   }
   
   // logout

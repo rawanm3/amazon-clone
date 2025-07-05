@@ -1,8 +1,8 @@
-// function showPage(pageId) {
-//     const sections = document.querySelectorAll("section");
-//     sections.forEach(section => {
-//       section.style.display = "none";
-//     });
+function showPage(pageId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+      section.style.display = "none";
+    });
   
     const target = document.getElementById(pageId);
     if (target) {
@@ -29,4 +29,4 @@ window.onload = function () {
   
     showPage("home"); 
   };
-  
+}

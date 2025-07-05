@@ -25,8 +25,14 @@ body {
     align-items: center;
     font-size: 1.1rem;
     overflow: hidden;
-    border: 0.09375rem solid transparent;
+    border: 0 solid transparent;
     cursor: pointer;
+}
+.logo-container:hover{
+    border: 0 !important;
+    cursor: pointer;
+    transform: 0 !important;
+    transition: 0 !important;
 }
 
 .logo {
@@ -43,8 +49,10 @@ body {
     margin-top: -0.625rem;
 }
 .container-navbar {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .border-white:hover {
@@ -120,11 +128,14 @@ width: 1.25rem;
     width: 100%;
 }
 /*==================login==================*/
-.login-container {
-margin-left: 0.9375rem;
-}
-.login-container p{
-    margin: 0;
+.login-container button{
+background-color: transparent;
+border: 0;
+color: white;
+margin: 0.25rem;
+font-size: 18px;
+line-height: 15px;
+font-weight: 400;
 }
 .account{
     font-weight: 900;
@@ -155,6 +166,26 @@ margin: 0;
 .cart-container {
 font-size: 1.1rem;
 display: flex;
+}
+.cart-container span:nth-child(2){
+    background-position: -10px -340px;
+    width: 38px;
+    height: 26px;
+    background-image: url(https://m.media-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-reorg-privacy._CB546805360_.png);
+    /* background-position: 0 1000px; */
+    background-repeat: repeat-x;
+}
+.cart-container span:nth-child(2):hover{
+    border: 0;
+}
+.cart-container span:nth-child(1){
+    position: relative;
+    left: 36px;
+    top: -12px;
+    color: #f08804;
+    font-size: 16px;
+    width: 19px;
+    font-weight: 700;
 }
 .cart-container i{
 font-size:1.5rem ;
@@ -199,4 +230,48 @@ top: 6.25rem;
     box-shadow: -0.125rem -0.125rem 0.125rem rgb(230, 227, 227),
     0.125rem 0.125rem 0.125rem white;
     margin: 0.125rem;
+}
+.carousel img {
+    width: 100%;
+}
+#home-products{
+position: relative;
+bottom: 16rem;
+}
+/* login */
+
+.login-left-side{
+    height: 50vh;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+.login-left-side button{
+    background-color: #ffd814;
+    /* border: 0;
+    padding: 0.25rem; */
+    width:150px ;
+    /* border-radius: 25px; */
+}
+.login-left-side button:hover
+{
+    background-color: #ff9900;
+    
+}
+
+/* footer */
+.footer-container {
+width: 100%;
+ height: 10rem;
+ background-color: #131a22;;
+color: white;
+ font-family: Arial, sans-serif;
+}
+.p1 , .p2{
+align-items: center;
+justify-content: center;
+display: flex;
+color: #ccc;
+}
+.p1{
+padding-top: 30px;
 }
