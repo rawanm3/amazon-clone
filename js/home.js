@@ -15,6 +15,7 @@ fetch("js/products.json")
   .then(products => {
     products.forEach(product => {
       const card = document.createElement("div");
+      card.className="product-card"
       card.style.border = "0.0625rem solid #ccc";
       card.style.borderRadius = "0.625rem";
       card.style.overflow = "hidden";
@@ -23,6 +24,7 @@ fetch("js/products.json")
       card.style.padding = "0.625rem";
       card.style.fontFamily = "Arial,sans-serif";
       card.style.backgroundColor = "white";
+      card.style.cursor = "pointer";
       
 
       const img = document.createElement("img");
@@ -62,8 +64,14 @@ fetch("js/products.json")
       card.appendChild(cat);
       card.appendChild(price);
       container.appendChild(card);
+      card.addEventListener("click", () => {
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        showPage("product");
+        renderProductPage(product);
+      });
     });
   })
+  
   .catch(error => {
     console.error("error", error);
   });
@@ -89,3 +97,6 @@ fetch("js/products.json")
     link2.addEventListener("mouseout",function(){
         link2.style.textDecoration="none";
     })
+
+
+

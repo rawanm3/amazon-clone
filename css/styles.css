@@ -258,6 +258,31 @@ bottom: 16rem;
     
 }
 
+.thumb-img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin-bottom: 10px;
+  width: 70px;
+}
+.thumb-img.active {
+  border-color: #007bff;
+}
+.color-swatch {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+.color-swatch.active {
+  border-color: #007bff;
+}
+.size-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
 /* footer */
 .footer-container {
 width: 100%;

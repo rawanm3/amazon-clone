@@ -3,16 +3,13 @@ function showPage(pageId) {
     sections.forEach(section => {
       section.style.display = "none";
     });
-  
     const target = document.getElementById(pageId);
     if (target) {
       target.style.display = "block";
     }
   
-
-window.onload = function () {
+    window.onload = function () {
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
-  
     const welcome = document.getElementById("welcomeMsg");
     const loginBtn = document.getElementById("loginNav");
     const logoutBtn = document.getElementById("logoutNav");

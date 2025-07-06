@@ -146,8 +146,57 @@
   </section>
    <!-- product -->
   <section id="product" style="display: none;">
-    <h2>Product Details</h2>
-    <div id="productDetails"></div>
+    <div class="container py-5">
+        <div class="row">
+    
+          <!-- Left: Thumbnails + Main Image -->
+          <div class="col-md-5 d-flex">
+            <div class="d-flex flex-column me-3">
+              <img src="https://via.placeholder.com/400x400.png?text=White+Polo" class="thumb-img active" data-large="https://via.placeholder.com/400x400.png?text=White+Polo" alt="thumb1" />
+              <img src="https://via.placeholder.com/400x400.png?text=Red+Polo" class="thumb-img" data-large="https://via.placeholder.com/400x400.png?text=Red+Polo" alt="thumb2" />
+              <img src="https://via.placeholder.com/400x400.png?text=Navy+Polo" class="thumb-img" data-large="https://via.placeholder.com/400x400.png?text=Navy+Polo" alt="thumb3" />
+            </div>
+            <div>
+              <img id="mainImage" src="https://via.placeholder.com/400x400.png?text=White+Polo" class="img-fluid rounded" alt="Main Product" />
+            </div>
+          </div>
+    
+          <!-- Right: Details -->
+          <div class="col-md-7">
+            <h2>Mobaco Women Regular Fit Polo Shirt LO100</h2>
+            <p class="text-danger fs-4">EGP 520.00</p>
+    
+            <div class="mb-3">
+              <strong>Color:</strong>
+              <div id="colors" class="mt-2">
+                <span class="color-swatch active" data-color="White" style="background-color: white;"></span>
+                <span class="color-swatch" data-color="Red" style="background-color: red;"></span>
+                <span class="color-swatch" data-color="Navy" style="background-color: navy;"></span>
+                <span class="color-swatch" data-color="Black" style="background-color: black;"></span>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <strong>Size:</strong>
+              <div id="sizes" class="mt-2">
+                <button class="btn btn-outline-secondary size-btn me-2" data-size="S">S</button>
+                <button class="btn btn-outline-secondary size-btn me-2" data-size="M">M</button>
+                <button class="btn btn-outline-secondary size-btn me-2" data-size="L">L</button>
+                <button class="btn btn-outline-secondary size-btn me-2" data-size="XL">XL</button>
+              </div>
+            </div>
+    
+            <button class="btn btn-warning mt-3" id="addToCart">Add to Cart</button>
+    
+            <div class="mt-4">
+              <p><strong>Material:</strong> 100% Cotton</p>
+              <p><strong>Care:</strong> Machine Wash</p>
+              <p><strong>Closure:</strong> Button</p>
+            </div>
+          </div>
+    
+        </div>
+      </div>
   </section>
   <footer>
     <div class="footer-container">
