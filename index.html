@@ -30,26 +30,34 @@
   
          </div>
          <div class="search-container">
-          <select name="" id="" class="search-select" onclick="showPage('category')">
+          <select name="category" id="categoryFilter" class="search-select">
             <option value="">All</option>
+            <option value="technology">technology</option>
+            <option value="furniture">furniture</option>
+            <option value="clothes">clothes</option>
+            <option value="electronics">electronics</option>
+            <option value="books">books</option>
           </select>
-          <input type="text" class="search-input">
-          <div class="search-icon">
+        
+          <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن منتج...">
+        
+          <div class="search-icon" id="searchBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
-  
           </div>
-         </div>
-         
-         <div class="cart-container " onclick="showPage('cart')">
+        </div>   
+         <div class="cart-container "  onclick="goToCart()">
           <span id="nav-cart-count" aria-hidden="true" class="nav-cart-count">0</span>
           <span></span>
         </div>
         <div class="login-container ">
-          <button id="loginNav" onclick="showPage('login')">Hello, Sign in
+          <button id="loginNav" onclick="showPage('login')" >
             <i class="fa-solid fa-arrow-right-to-bracket" style="font-size: 12px;"></i>
           </button>
+         <button id="logoutNav" onclick="logoutUser()" style="display: none;">
+          <i class="fa-solid fa-arrow-right-to-bracket" style="font-size: 12px;"></i>
+         </button>
          </div>
-         <button id="logoutNav" onclick="logoutUser()" style="display: none;">Logout</button>
+         
       </div>
   </nav>
   <!-- main body -->
@@ -69,12 +77,10 @@
             <img class="d-block w-100" src="./assets/images/modeling.jpg" alt="Third slide">
           </div>
         </div>
-      
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-      
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
@@ -92,13 +98,13 @@
         <h2>Login</h2>
         <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
-          <input type="email" class="form-control" id="loginUsername" aria-describedby="emailHelp" placeholder="Username">
+          <input type="email" class="form-control" id="loginUname" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+          <input type="password" class="form-control" id="loginPass" placeholder="Password">
         </div>
-        <button type="submit" class="btn shadow" onclick="loginUser()">Login</button>
+        <button type="submit" class="btn shadow" onclick="login()">Login</button>
         <p>Don't have an account? <a href="#" onclick="showPage('register')">Register</a></p>
     </div>
     <div>
@@ -113,13 +119,13 @@
         <h2>Register</h2>
         <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
-          <input type="email" class="form-control" id="regUsername" aria-describedby="emailHelp" placeholder="Username">
+          <input type="email" class="form-control" id="regUname" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="regPassword" placeholder="Password">
+          <input type="password" class="form-control" id="regPass" placeholder="Password">
         </div>
-        <button type="submit" class="btn shadow"  onclick="registerUser()">Register</button>
+        <button type="submit" class="btn shadow"  onclick="register()">Register</button>
         <p>Already have an account? <a href="#" onclick="showPage('login')">Login</a></p>
     </div>
     <div>
@@ -128,16 +134,23 @@
     </div>
   </section>
     <!-- search -->
-  <section id="search" style="display: none;">
+  <!-- <section id="search" style="display: none;">
     <h2>Search</h2>
     <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
     <div id="searchResults"></div>
-  </section>
+  </section> -->
    <!-- cart -->
-  <section id="cart" style="display: none;">
-    <h2>Cart</h2>
-    <div id="cartItems"></div>
+   <section id="cart" style="display: none;">
+    <div class="container py-5">
+      <h2 class="mb-4">Your Shopping Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-summary text-end mt-4">
+        <h4 id="totalPrice">Total: EGP 0.00</h4>
+        <button class="btn btn-success mt-3">Proceed to Checkout</button>
+      </div>
+    </div>
   </section>
+  
    <!-- checkout -->
   <section id="checkout" style="display: none;">
     <h2>Checkout</h2>
@@ -147,57 +160,33 @@
    <!-- product -->
   <section id="product" style="display: none;">
     <div class="container py-5">
-        <div class="row">
-    
-          <!-- Left: Thumbnails + Main Image -->
-          <div class="col-md-5 d-flex">
-            <div class="d-flex flex-column me-3">
-              <img src="https://via.placeholder.com/400x400.png?text=White+Polo" class="thumb-img active" data-large="https://via.placeholder.com/400x400.png?text=White+Polo" alt="thumb1" />
-              <img src="https://via.placeholder.com/400x400.png?text=Red+Polo" class="thumb-img" data-large="https://via.placeholder.com/400x400.png?text=Red+Polo" alt="thumb2" />
-              <img src="https://via.placeholder.com/400x400.png?text=Navy+Polo" class="thumb-img" data-large="https://via.placeholder.com/400x400.png?text=Navy+Polo" alt="thumb3" />
-            </div>
-            <div>
-              <img id="mainImage" src="https://via.placeholder.com/400x400.png?text=White+Polo" class="img-fluid rounded" alt="Main Product" />
+      <div class="row">
+        <div class="col-md-5 d-flex">
+          <div id="thumbContainer" class="d-flex flex-column me-3"></div>
+          <div>
+            <img id="mainImage" src="" class="img-fluid rounded" alt="Main Product" />
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h2 id="Title"></h2>
+          <p id="Price" class="text-danger fs-4"></p>
+          <p id="Desc" class="text-muted"></p>
+          <div class="mb-3">
+            <strong>Color:</strong>
+            <div id="colors" class="mt-2"></div>
+          </div>
+          <div class="mb-3">
+            <strong>Category:</strong>
+            <div  class="mt-2">
+              <p id="category" class="text-muted"></p>
             </div>
           </div>
-    
-          <!-- Right: Details -->
-          <div class="col-md-7">
-            <h2>Mobaco Women Regular Fit Polo Shirt LO100</h2>
-            <p class="text-danger fs-4">EGP 520.00</p>
-    
-            <div class="mb-3">
-              <strong>Color:</strong>
-              <div id="colors" class="mt-2">
-                <span class="color-swatch active" data-color="White" style="background-color: white;"></span>
-                <span class="color-swatch" data-color="Red" style="background-color: red;"></span>
-                <span class="color-swatch" data-color="Navy" style="background-color: navy;"></span>
-                <span class="color-swatch" data-color="Black" style="background-color: black;"></span>
-              </div>
-            </div>
-    
-            <div class="mb-3">
-              <strong>Size:</strong>
-              <div id="sizes" class="mt-2">
-                <button class="btn btn-outline-secondary size-btn me-2" data-size="S">S</button>
-                <button class="btn btn-outline-secondary size-btn me-2" data-size="M">M</button>
-                <button class="btn btn-outline-secondary size-btn me-2" data-size="L">L</button>
-                <button class="btn btn-outline-secondary size-btn me-2" data-size="XL">XL</button>
-              </div>
-            </div>
-    
-            <button class="btn btn-warning mt-3" id="addToCart">Add to Cart</button>
-    
-            <div class="mt-4">
-              <p><strong>Material:</strong> 100% Cotton</p>
-              <p><strong>Care:</strong> Machine Wash</p>
-              <p><strong>Closure:</strong> Button</p>
-            </div>
-          </div>
-    
+          <button class="btn btn-warning mt-3" id="addToCart">Add to Cart</button>
         </div>
       </div>
+    </div>
   </section>
+  
   <footer>
     <div class="footer-container">
       <p class="p1"><a href="#" style="text-decoration: none;color: #ccc;" id="a1">condition of Use & Sale</a>&nbsp;&nbsp;&nbsp;<span><a href="#" style="text-decoration: none;color: #ccc;" id="a2">Privacy Notice</a></span><span>&nbsp;&nbsp;&nbsp;<a href="#" style="text-decoration: none; color: #ccc;" id="a3">interest-Based Ads</a></span></p>

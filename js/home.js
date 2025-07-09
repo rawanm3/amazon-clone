@@ -1,9 +1,5 @@
 //////////////////////products///////////////////////////
-
-
 const container = document.getElementById("products-container");
-
-    
 container.style.display = "grid";
 container.style.gridTemplateColumns = "repeat(5, 1fr)";
 container.style.gap = "20px";
@@ -70,6 +66,9 @@ fetch("js/products.json")
         renderProductPage(product);
       });
     });
+      document.getElementById("searchInput").addEventListener("input", filterProducts);
+      document.getElementById("searchBtn").addEventListener("click", filterProducts);
+      document.getElementById("categoryFilter").addEventListener("change", filterProducts);
   })
   
   .catch(error => {
@@ -98,5 +97,121 @@ fetch("js/products.json")
         link2.style.textDecoration="none";
     })
 
+
+    function renderProductPage(product) {
+      document.getElementById("mainImage").src = product.images[0];
+      document.getElementById("Title").textContent = product.title;
+      document.getElementById("Price").textContent = product.price;
+      document.getElementById("Desc").textContent = product.description;
+      document.getElementById("category").textContent = product.category;
+
+      const thumbContainer = document.getElementById("thumbContainer");
+      thumbContainer.innerHTML = ""; 
+
+      product.images.forEach((imgSrc, index) => {
+        const thumb = document.createElement("img");
+        thumb.src = imgSrc;
+        thumb.className = "thumb-img";
+    
+        if (index === 0) {
+          thumb.classList.add("active");
+        }
+        thumb.addEventListener("click", () => {
+          document.getElementById("mainImage").src = imgSrc;
+         // active
+          const allThumbs = document.querySelectorAll(".thumb-img");
+          allThumbs.forEach(t => t.classList.remove("active"));
+          thumb.classList.add("active");
+        });
+    
+        thumbContainer.appendChild(thumb);
+      });
+    
+      const colorsDiv = document.getElementById("colors");
+      colorsDiv.innerHTML = ""; 
+      product.colors.forEach(color => {
+        const span = document.createElement("span");
+        span.className = "color-bg";
+        span.setAttribute("data-color", color);
+        span.style.backgroundColor = color;
+
+    
+        colorsDiv.appendChild(span);
+      });
+      document.getElementById("addToCart").onclick = function () {
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
+        const product = JSON.parse(localStorage.getItem("selectedProduct"));
+      
+        if (!user) {
+          alert("يجب تسجيل الدخول أولاً");
+          showPage("login");
+          return;
+        }
+      
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
+        const exists = cart.find(item => item.id === product.id);
+        if (!exists) {
+          cart.push(product);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          alert("تمت الإضافة إلى السلة بنجاح");
+        } else {
+          alert("هذا المنتج موجود بالفعل في السلة");
+        }
+      };
+      
+    }
+card.addEventListener("click", () => {
+  localStorage.setItem("selectedProduct", JSON.stringify(product));
+  showPage("product");
+  renderProductPage(product);
+});
+
+function renderCart() {
+  const cartItemsContainer = document.getElementById("cartItems");
+  cartItemsContainer.innerHTML = "";
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+
+  cart.forEach(product => {
+    const item = document.createElement("div");
+    item.className = "card mb-3";
+
+    const priceNumber = parseFloat(product.price.replace(/[^\d.]/g, "")) || 0;
+    total += priceNumber;
+
+    item.innerHTML = `
+      <div class="row g-0 align-items-center">
+        <div class="col-md-2 text-center">
+          <img src="${product.thumbnail}" class="product-img" alt="Product Image" style="width:80px;">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text text-muted">${product.price}</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-end pe-3">
+          <p class="fw-bold">${product.price}</p>
+          <button class="btn btn-danger btn-sm" onclick="removeFromCart('${product.id}')">Remove</button>
+        </div>
+      </div>
+    `;
+    cartItemsContainer.appendChild(item);
+  });
+
+  document.getElementById("totalPrice").textContent = `Total: EGP ${total.toLocaleString()}`;
+}
+function removeFromCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter(item => item.id !== id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function goToCart() {
+  showPage("cart");
+  renderCart();
+}
 
 
