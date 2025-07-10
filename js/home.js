@@ -1,10 +1,6 @@
 //////////////////////products///////////////////////////
 const container = document.getElementById("products-container");
-container.style.display = "grid";
-container.style.gridTemplateColumns = "repeat(5, 1fr)";
-container.style.gap = "20px";
-container.style.padding = "20px";
-container.style.direction = "rtl";
+container.className="products-container"
 
 fetch("js/products.json")
   .then(response => response.json())
@@ -182,7 +178,7 @@ function renderCart() {
 
     item.innerHTML = `
       <div class="row g-0 align-items-center">
-        <div class="col-md-2 text-center">
+        <div class="col-md-2 ">
           <img src="${product.thumbnail}" class="product-img" alt="Product Image" style="width:80px;">
         </div>
         <div class="col-md-6">
