@@ -41,7 +41,7 @@
         
           <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن منتج...">
         
-          <div class="search-icon" id="searchBtn">
+          <div class="search-icon" id="searchBtn" onclick="showPage('search')">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>   
@@ -134,11 +134,11 @@
     </div>
   </section>
     <!-- search -->
-  <!-- <section id="search" style="display: none;">
+  <section id="search" style="display: none;">
     <h2>Search</h2>
     <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
     <div id="searchResults"></div>
-  </section> -->
+  </section>
    <!-- cart -->
    <section id="cart" style="display: none;">
     <div class="container py-5">
@@ -146,7 +146,7 @@
       <div id="cartItems"></div>
       <div class="cart-summary text-end mt-4">
         <h4 id="totalPrice">Total: EGP 0.00</h4>
-        <button class="btn btn-success mt-3">Proceed to Checkout</button>
+        <button class="btn btn-success mt-3" onclick="showPage('checkout')">Proceed to Checkout</button>
       </div>
     </div>
   </section>
