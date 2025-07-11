@@ -1,75 +1,175 @@
 //////////////////////products///////////////////////////
+// const container = document.getElementById("products-container");
+// container.className="products-container"
+
+// fetch("js/products.json")
+//   .then(response => response.json())
+//   .then(products => {
+//     products.forEach(product => {
+//       const card = document.createElement("div");
+//       card.className="product-card"
+//       card.style.border = "0.0625rem solid #ccc";
+//       card.style.borderRadius = "0.625rem";
+//       card.style.overflow = "hidden";
+//       card.style.boxShadow = "0 0 0.625rem rgba(0,0,0,0.1)";
+//       card.style.textAlign = "center";
+//       card.style.padding = "0.625rem";
+//       card.style.fontFamily = "Arial,sans-serif";
+//       card.style.backgroundColor = "white";
+//       card.style.cursor = "pointer";
+      
+//       const img = document.createElement("img");
+//       img.src = product.images[0]; 
+//       img.alt = product.title;
+//       img.style.width = "100%";
+//       img.style.height = "9.375rem"; 
+//       img.style.objectFit = "cover";
+//       img.style.borderBottom = "0.0625rem solid #eee";
+
+//       const title = document.createElement("div");
+//       title.textContent = product.title;
+//       title.style.fontWeight = "bold";
+//       title.style.margin = "0.625rem 0 0.3125rem 0";
+
+//       const desc = document.createElement("div");
+//       desc.textContent = product.description;
+//       desc.style.fontSize = "0.875rem";
+//       desc.style.color = "#666";
+//       desc.style.marginBottom = "0.625rem";
+
+//       const cat = document.createElement("div");
+//       cat.textContent = product.category;
+//       cat.style.fontSize = "0.875rem";
+//       cat.style.color = "red";
+//       cat.style.marginBottom = "0.625rem";
+
+//       const price = document.createElement("div");
+//       price.textContent = product.price;
+//       price.style.color = "green";
+//       price.style.fontWeight = "bold";
+//       price.style.fontSize = "1.125rem";
+
+//       card.appendChild(img);
+//       card.appendChild(title);
+//       card.appendChild(desc);
+//       card.appendChild(cat);
+//       card.appendChild(price);
+//       container.appendChild(card);
+//       card.addEventListener("click", () => {
+//         localStorage.setItem("selectedProduct", JSON.stringify(product));
+//         showPage("product");
+//         renderProductPage(product);
+       
+//       });
+//     });
+//       document.getElementById("searchInput").addEventListener("input", filterProducts);
+//       document.getElementById("searchBtn").addEventListener("click", filterProducts);
+//       document.getElementById("categoryFilter").addEventListener("change", filterProducts);
+//   })
+  
+//   .catch(error => {
+//     console.error("error", error);
+//   });
+
+
+
+ 
+
+////////////////////////////////////////////////////
 const container = document.getElementById("products-container");
 container.className="products-container"
+const showMoreBtn = document.getElementById("showMoreBtn");
 
-fetch("js/products.json")
-  .then(response => response.json())
+window.addEventListener("DOMContentLoaded", () => {
+  updateCartCount();
+});
+
+let allProducts = [];        // all products from JSON
+let productsNum = 8;           // number of products to show every time 
+let numOfProducts = 0;             // current numder products shown after  view more clicked
+
+function createProductCard(product) {
+  const card = document.createElement("div");
+  card.className="product-card"
+  card.style.border = "0.0625rem solid #ccc";
+  card.style.borderRadius = "0.625rem";
+  card.style.overflow = "hidden";
+  card.style.boxShadow = "0 0 0.625rem rgba(0,0,0,0.1)";
+  card.style.textAlign = "center";
+  card.style.padding = "0.625rem";
+  card.style.fontFamily = "Arial,sans-serif";
+  card.style.backgroundColor = "white";
+  card.style.cursor = "pointer";
+
+  const img = document.createElement("img");
+  img.src = product.images[0]; 
+  img.alt = product.title;
+  img.style.width = "100%";
+  img.style.height = "9.375rem"; 
+  img.style.objectFit = "cover";
+  img.style.borderBottom = "0.0625rem solid #eee";
+  
+  const title = document.createElement("div");
+  title.textContent = product.title;
+  title.style.fontWeight = "bold";
+  title.style.margin = "0.625rem 0 0.3125rem 0";
+  
+  const desc = document.createElement("div");
+  desc.textContent = product.description;
+  desc.style.fontSize = "0.875rem";
+  desc.style.color = "#666";
+  desc.style.marginBottom = "0.625rem";
+  
+  const cat = document.createElement("div");
+  cat.textContent = product.category;
+  cat.style.fontSize = "0.875rem";
+  cat.style.color = "#666";
+  cat.style.marginBottom = "0.625rem";
+  
+  const price = document.createElement("div");
+  price.textContent = product.price;
+  price.style.color = "green";
+  price.style.fontWeight = "bold";
+  price.style.fontSize = "1.125rem";
+  
+  card.appendChild(img);
+  card.appendChild(title);
+  card.appendChild(desc);
+  card.appendChild(cat);
+  card.appendChild(price);
+  container.appendChild(card);  
+  card.onclick = () => {
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+      showPage("product");
+      renderProductPage(product);
+    };
+  }
+  
+  function renderProductNum() {
+    const viewMore = allProducts.slice(numOfProducts,numOfProducts + productsNum);
+    viewMore.forEach(createProductCard);
+    numOfProducts += viewMore.length;
+    if (numOfProducts >= allProducts.length) {
+      showMoreBtn.style.display = "none";  // أخفي الزر بعد انتهاء كل المنتجات
+      const viewLess = document.createElement("button");
+      viewLess.textContent = "view less"
+    }
+  }
+
+  fetch("js/products.json")
+  .then(res => res.json())
   .then(products => {
-    products.forEach(product => {
-      const card = document.createElement("div");
-      card.className="product-card"
-      card.style.border = "0.0625rem solid #ccc";
-      card.style.borderRadius = "0.625rem";
-      card.style.overflow = "hidden";
-      card.style.boxShadow = "0 0 0.625rem rgba(0,0,0,0.1)";
-      card.style.textAlign = "center";
-      card.style.padding = "0.625rem";
-      card.style.fontFamily = "Arial,sans-serif";
-      card.style.backgroundColor = "white";
-      card.style.cursor = "pointer";
-      
-
-      const img = document.createElement("img");
-      img.src = product.images[0]; 
-      img.alt = product.title;
-      img.style.width = "100%";
-      img.style.height = "9.375rem"; 
-      img.style.objectFit = "cover";
-      img.style.borderBottom = "0.0625rem solid #eee";
-
-      const title = document.createElement("div");
-      title.textContent = product.title;
-      title.style.fontWeight = "bold";
-      title.style.margin = "0.625rem 0 0.3125rem 0";
-
-      const desc = document.createElement("div");
-      desc.textContent = product.description;
-      desc.style.fontSize = "0.875rem";
-      desc.style.color = "#666";
-      desc.style.marginBottom = "0.625rem";
-
-      const cat = document.createElement("div");
-      cat.textContent = product.category;
-      cat.style.fontSize = "0.875rem";
-      cat.style.color = "red";
-      cat.style.marginBottom = "0.625rem";
-
-      const price = document.createElement("div");
-      price.textContent = product.price;
-      price.style.color = "green";
-      price.style.fontWeight = "bold";
-      price.style.fontSize = "1.125rem";
-
-      card.appendChild(img);
-      card.appendChild(title);
-      card.appendChild(desc);
-      card.appendChild(cat);
-      card.appendChild(price);
-      container.appendChild(card);
-      card.addEventListener("click", () => {
-        localStorage.setItem("selectedProduct", JSON.stringify(product));
-        showPage("product");
-        renderProductPage(product);
-      });
-    });
-      document.getElementById("searchInput").addEventListener("input", filterProducts);
-      document.getElementById("searchBtn").addEventListener("click", filterProducts);
-      document.getElementById("categoryFilter").addEventListener("change", filterProducts);
+    allProducts = products;
+    renderProductNum(); // عرض أول دفعة
+  
+    // روابط الفلترة أو البحث شغالة برضو
+    document.getElementById("searchInput").addEventListener("input", filterProducts);
+    document.getElementById("searchBtn").addEventListener("click", filterProducts);
+    document.getElementById("categoryFilter").addEventListener("change", filterProducts);
   })
   
-  .catch(error => {
-    console.error("error", error);
-  });
+  showMoreBtn.addEventListener("click", renderProductNum);
+
   //////////////////////////////////footer//////////
   const link = document.getElementById("a1");
   link.addEventListener("mouseover",function(){
@@ -149,6 +249,7 @@ fetch("js/products.json")
         const exists = cart.find(item => item.id === product.id);
         if (!exists) {
           cart.push(product);
+          updateCartCount();
           localStorage.setItem("cart", JSON.stringify(cart));
           alert("تمت الإضافة إلى السلة بنجاح");
         } else {
@@ -162,6 +263,10 @@ card.addEventListener("click", () => {
   showPage("product");
   renderProductPage(product);
 });
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.getElementById("nav-cart-count").textContent = cart.length;
+}
 
 function renderCart() {
   const cartItemsContainer = document.getElementById("cartItems");
@@ -194,6 +299,7 @@ function renderCart() {
       </div>
     `;
     cartItemsContainer.appendChild(item);
+
   });
 
   document.getElementById("totalPrice").textContent = `Total: EGP ${total.toLocaleString()}`;
@@ -203,11 +309,14 @@ function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
+  updateCartCount();
 }
 
 function goToCart() {
   showPage("cart");
   renderCart();
+  updateCartCount();
 }
 
-
+/*********** search by description (and optionally name) ***********/
+/*********** search by description (and optionally name) ***********/

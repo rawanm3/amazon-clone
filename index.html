@@ -30,18 +30,8 @@
   
          </div>
          <div class="search-container">
-          <select name="category" id="categoryFilter" class="search-select">
-            <option value="">All</option>
-            <option value="technology">technology</option>
-            <option value="furniture">furniture</option>
-            <option value="clothes">clothes</option>
-            <option value="electronics">electronics</option>
-            <option value="books">books</option>
-          </select>
-        
-          <input type="text" class="search-input" id="searchInput" placeholder="ابحث عن منتج...">
-        
-          <div class="search-icon" id="searchBtn" onclick="showPage('search')">
+          <input type="text" class="search-input" id="homeSearch" placeholder="search product">
+          <div class="search-icon" id="searchBtn" onclick="showPage('filterPage')">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
         </div>   
@@ -89,6 +79,9 @@
       <main id="home-products">
         <div id="products-container">
         </div>
+        <div class="text-center my-4">
+          <button id="showMoreBtn" class="btn btn-outline-primary px-4"> View More</button>
+        </div>
       </main>
   </section>
    <!-- login -->
@@ -134,11 +127,62 @@
     </div>
   </section>
     <!-- search -->
-  <section id="search" style="display: none;">
-    <h2>Search</h2>
-    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()" />
-    <div id="searchResults"></div>
-  </section>
+    <section id="filterPage" style="display: none;">
+      <div class="container p-4">
+        <h3 class="mb-4" style="color: #2c0639; font-size: 34px;">نتائج الفلترة</h3>
+    
+        <div class="row">
+          <!-- فلتر -->
+          <div class="col-sm-12 col-md-3 mb-2 d-md-block d-none">
+            <h5 class="mb-3" style="color: rgb(2, 2, 56);">الفلاتر</h5>
+    
+            <!-- الفئة -->
+            <h6 style="color: rgb(2, 2, 56);">الفئة</h6>
+            <div class="mb-3">
+              <button class="btn w-100 mb-2 category-btn" data-category="">الكل</button>
+              <button class="btn w-100 mb-2 category-btn" data-category="technology">technology</button>
+              <button class="btn w-100 mb-2 category-btn" data-category="furniture">furniture</button>
+              <button class="btn w-100 mb-2 category-btn" data-category="clothes">clothes</button>
+              <button class="btn w-100 mb-2 category-btn" data-category="electronics">electronics</button>
+              <button class="btn w-100 mb-2 category-btn" data-category="books">books</button>
+            </div>
+    
+            <!-- اللون -->
+            <h6 style="color: rgb(2, 2, 56);">اللون</h6>
+            <div class="mb-3">
+              <button class="btn w-100 mb-2 color-btn" data-color="black">black</button>
+              <button class="btn w-100 mb-2 color-btn" data-color="white">white</button>
+              <button class="btn w-100 mb-2 color-btn" data-color="red">red</button>
+              <button class="btn w-100 mb-2 color-btn" data-color="blue">blue</button>
+            </div>
+    
+            <!-- السعر -->
+            <h6 style="color: rgb(2, 2, 56);">السعر</h6>
+            <div class="mb-3">
+              <button class="btn w-100 mb-2 price-btn" data-price="0-100">أقل من 100</button>
+              <button class="btn w-100 mb-2 price-btn" data-price="100-300">من 100 إلى 300</button>
+              <button class="btn w-100 mb-2 price-btn" data-price="300-1000">من 300 إلى 1000</button>
+            </div>
+            
+            <button onclick="applyFilters()">تصفية</button>
+            <!-- زر تصفية -->
+            <button id="clearFilters" type="button" class="btn mt-3" style="background-color: #D1410C; color: white;">
+              مسح كل الفلاتر
+            </button>
+          </div>
+    
+          <!-- عرض المنتجات -->
+          <div class="col-sm-12 col-md-9">
+            <div class="row" id="filteredProductsContainer" style="gap: 1rem;">
+              <!-- تُحقن المنتجات هنا -->
+            </div>
+            <p id="noResultsMsg" class="text-center mt-4 text-muted" style="display: none;">
+              لا توجد منتجات مطابقة للفلتر.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>    
    <!-- cart -->
    <section id="cart" style="display: none;">
     <div class="container py-5">
@@ -197,7 +241,8 @@
   <script src="./js/app.js"></script>
   <script src="./js/auth.js"></script>
   <script src="./js/products.json"></script>
-  <script src="/js/home.js"></script>
+  <script src="./js/home.js"></script>
+  <script src="./js/search.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

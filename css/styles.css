@@ -82,7 +82,7 @@ padding-left: 0.94rem;
 }
 /*==================search==================*/
 .search-container{
-    background-color: red;
+    background-color: rgb(235, 160, 94);
     margin-left: 1.5625rem;
     width: 55.625rem;
     display: flex;
@@ -185,7 +185,7 @@ display: flex;
     position: relative;
     left: 36px;
     top: -12px;
-    color: #f08804;
+    color: rgb(235, 160, 94);
     font-size: 16px;
     width: 19px;
     font-weight: 700;
@@ -357,7 +357,7 @@ padding-top: 30px;
   .search-container {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     align-items: center;
   }
 
@@ -388,4 +388,7 @@ padding-top: 30px;
     height: 150px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
+  }
+  #showMoreBtn {
+    direction: rtl;
   }

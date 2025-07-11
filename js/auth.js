@@ -1,3 +1,14 @@
+function showPage(pageId) {
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+  const target = document.getElementById(pageId);
+  if (target) {
+    target.style.display = "block";
+  }
+
+}
 // register
 function register() {
     const username = document.getElementById("regUname").value;
@@ -36,32 +47,36 @@ function register() {
     if (welcome) welcome.innerText = `${"hello, "+user.username}`;
     sign();
     showPage("home");
+    updateCartCount(); // ← بعد تسجيل الدخول
+
   }
   
-  // logout
-  function logoutUser() {
-    localStorage.removeItem("loggedInUser");
-    alert("You are logged out");
-    showPage("login");
-  }
-  
-  function showPage(pageId) {
-    const sections = document.querySelectorAll("section");
-    sections.forEach(section => {
-      section.style.display = "none";
-    });
-    const target = document.getElementById(pageId);
-    if (target) {
-      target.style.display = "block";
-    }
-  
-}
 // Logout
+// function logoutUser() {
+//   localStorage.removeItem("loggedInUser");
+//   alert("You are logged out");
+//   sign();
+//   showPage("home");
+//   document.getElementById("loginNav").style.display = "inline-block";
+//   document.getElementById("logoutNav").style.display = "none";
+// }
 function logoutUser() {
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  // امسح سلة المستخدم الحالي إن وُجد
+  if (user) {
+    localStorage.removeItem(`cart_${user.username}`);
+  }
+
+  // امسح تسجيل الدخول
   localStorage.removeItem("loggedInUser");
+
   alert("You are logged out");
-  sign();
+  sign(); // تحديث الـ nav
+  updateCartCount(); // تحديث رقم السلة إلى 0
   showPage("home");
+
+  // تحديث الأزرار
   document.getElementById("loginNav").style.display = "inline-block";
   document.getElementById("logoutNav").style.display = "none";
 }
