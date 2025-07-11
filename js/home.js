@@ -154,6 +154,9 @@ fetch("js/products.json")
         } else {
           alert("هذا المنتج موجود بالفعل في السلة");
         }
+        //اضافة العداد الارقام 
+        document.getElementById("nav-cart-count").textContent = cart.length;
+
       };
       
     }
@@ -209,5 +212,86 @@ function goToCart() {
   showPage("cart");
   renderCart();
 }
+//كود ال checkout 
+function showPage(pageId) {
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
 
+  document.getElementById(pageId).style.display = "block";
+}
 
+function renderCheckout() {
+  const checkoutItemsContainer = document.getElementById("checkoutItems");
+  checkoutItemsContainer.innerHTML = "";
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+
+  if (cart.length === 0) {
+    checkoutItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    document.getElementById("checkoutTotal").textContent = "Total: EGP 0.00";
+    return;
+  }
+
+  cart.forEach(product => {
+    const priceNumber = parseFloat(product.price.replace(/[^\d.]/g, "")) || 0;
+    total += priceNumber;
+
+    const item = document.createElement("div");
+    item.className = "card mb-3";
+
+    item.innerHTML = `
+      <div class="row g-0 align-items-center">
+        <div class="col-md-2">
+          <img src="${product.thumbnail}" class="img-fluid rounded-start" alt="Product Image">
+        </div>
+        <div class="col-md-10">
+          <div class="card-body">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text">${product.price}</p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    checkoutItemsContainer.appendChild(item);
+  });
+
+  document.getElementById("checkoutTotal").textContent = `Total: EGP ${total.toLocaleString()}`;
+}
+
+function checkout() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  if (cart.length === 0) {
+    alert("السلة فارغة!");
+    return;
+  }
+
+  const address = document.getElementById("address").value;
+  const phone = document.getElementById("phone").value;
+  const date = document.getElementById("date").value;
+
+  if (!address || !phone || !date) {
+    alert("من فضلك املأ جميع بيانات الشحن قبل إتمام الشراء.");
+    return;
+  }
+
+  let message = `✅ تمت عملية الشراء بنجاح!\n\n`;
+  message += `📦 Shipping Address: ${address}\n`;
+  message += `📞 Phone Number: ${phone}\n`;
+  message += `🗓 Shopping Date: ${date}\n\n`;
+  message += `شكرا لتسوقك معنا!`;
+
+  alert(message);
+
+  // فضي السلة بعد الشراء
+  localStorage.removeItem("cart");
+  document.getElementById("nav-cart-count").textContent = "0";
+
+  // رجعي المستخدم للـ home
+  showPage("home");
+  renderCart();
+}
