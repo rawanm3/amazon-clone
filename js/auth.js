@@ -1,3 +1,4 @@
+// changing sections
 function showPage(pageId) {
   const sections = document.querySelectorAll("section");
   sections.forEach(section => {
@@ -7,59 +8,75 @@ function showPage(pageId) {
   if (target) {
     target.style.display = "block";
   }
+}
+// username validation
+function isValidUsername(username) {
+  const usernameRegex = /^[A-Za-z0-9]{3,15}$/;
+  return usernameRegex.test(username);
+}
 
+function isValidPassword(password) {
+  const upper = /[A-Z]/.test(password);
+  const lower = /[a-z]/.test(password);
+  const digit = /[0-9]/.test(password);
+  const special = /[^A-Za-z0-9]/.test(password);
+  return password.length >= 8 && upper && lower && digit && special;
 }
 // register
 function register() {
-    const username = document.getElementById("regUname").value;
-    const password = document.getElementById("regPass").value;
+  const username = document.getElementById("regUname").value;
+  const password = document.getElementById("regPass").value;
     if (!username || !password) {
       alert(" Please enter your username and password");
       return;
     }
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+     // تحقق من الفراغ
+    if (!username || !password) {
+    alert("يجب إدخال اسم المستخدم وكلمة المرور");
+    return;
+    }
+    if (!isValidUsername(username)) {
+    alert("اسم المستخدم يجب أن يكون من 3 إلى 15 حرفًا/رقمًا بدون رموز أو مسافات");
+    return;
+    }
+
+    if (!isValidPassword(password)) {
+    alert("كلمة المرور يجب أن تكون 8 أحرف على الأقل وتحتوي على حرف كبير وصغير ورقم ورمز خاص");
+    return;
+    }
+  let users = JSON.parse(localStorage.getItem("users")) || [];
     if (users.find(u => u.username === username)) {
       alert("User name is already used");
       return;
     }
-    users.push({ username, password });
+  users.push({ username, password });
     localStorage.setItem("users", JSON.stringify(users));
     alert("You have registered successfully, you can log in now.");
     showPage("login");
-  }
-  
-  // log in
-  function login() {
-    const username = document.getElementById("loginUname").value;
-    const password = document.getElementById("loginPass").value;
-  
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    const user = users.find(u => u.username === username && u.password === password);
+}
+
+// log in
+
+function login() {
+  const username = document.getElementById("loginUname").value;
+  const password = document.getElementById("loginPass").value;
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.username === username && u.password === password);
   
     if (!user) {
       alert(" The login information is incorrect ");
       return;
     }
   
-    localStorage.setItem("loggedInUser", JSON.stringify(user));
-    alert("Logged in successfully");
-    const welcome = document.getElementById("loginNav");
-    if (welcome) welcome.innerText = `${"hello, "+user.username}`;
-    sign();
-    showPage("home");
-    updateCartCount(); // ← بعد تسجيل الدخول
+  localStorage.setItem("loggedInUser", JSON.stringify(user));
+  alert("Logged in successfully");
+  const welcome = document.getElementById("loginNav");
+  if (welcome) welcome.innerText = `${"hello, "+user.username}`;
+  sign();
+  showPage("home");
+  updateCartCount(); // ← بعد تسجيل الدخول
+}
 
-  }
-  
-// Logout
-// function logoutUser() {
-//   localStorage.removeItem("loggedInUser");
-//   alert("You are logged out");
-//   sign();
-//   showPage("home");
-//   document.getElementById("loginNav").style.display = "inline-block";
-//   document.getElementById("logoutNav").style.display = "none";
-// }
 function logoutUser() {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
@@ -73,7 +90,7 @@ function logoutUser() {
 
   alert("You are logged out");
   sign(); // تحديث الـ nav
-  updateCartCount(); // تحديث رقم السلة إلى 0
+  // updateCartCount(); // تحديث رقم السلة إلى 0
   showPage("home");
 
   // تحديث الأزرار
